@@ -1,25 +1,43 @@
-import logo from './logo.svg';
 import './App.css';
+import {Route, Routes} from "react-router-dom";
+import Navbar from "./Navbar";
+import Home from "./Home";
+import NCursors from "./NCursors";
+import {useEffect, useState} from "react";
+import Button from "./Button";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [mousePosition, setMousePosition] = useState({x: 0, y: 0});
+
+    useEffect(() => {
+        const handleMouseMove = (event) => {
+            console.log(event.movementX, event.movementY)
+            setMousePosition({x: event.clientX, y: event.clientY});
+        };
+
+        window.addEventListener('mousemove', handleMouseMove);
+
+        return () => {
+            window.removeEventListener(
+                'mousemove',
+                handleMouseMove
+            );
+        };
+    }, []);
+
+    return (
+        <div>
+            <Navbar/>
+            <div className="content">
+                <Routes>
+                    <Route path="/" element={<Home/>}/>
+                    <Route path="/cursor-10" element={[<NCursors count={10} mouse={mousePosition}/>, <Button next={'/cursor-50'} text={'Next'}/>]}/>
+                    <Route path="/cursor-50" element={[<NCursors count={50} mouse={mousePosition}/>, <Button next={'/cursor-100'} text={'Next'}/>]}/>
+                    <Route path="/cursor-100" element={[<NCursors count={100} mouse={mousePosition}/>, <Button next={'/cursor-10'} text={'Restart'}/>]}/>
+                </Routes>
+            </div>
+        </div>
+    );
 }
 
 export default App;
