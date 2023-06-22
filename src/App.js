@@ -29,7 +29,7 @@ function App() {
             <Navbar/>
             <div className="content">
                 <Routes>
-                    <Route path="/" element={<Home/>}/>
+                    <Route path="/" element={[<Home mouse={mousePosition}/>, <Button next={'/cursor-10'} text={'Start'} />]}/>
                     <Route path="/cursor-10" element={[<NCursors count={10} mouse={mousePosition}/>, <Button next={'/cursor-50'} text={'Next'}/>]}/>
                     <Route path="/cursor-50" element={[<NCursors count={50} mouse={mousePosition}/>, <Button next={'/cursor-100'} text={'Next'}/>]}/>
                     <Route path="/cursor-100" element={[<NCursors count={100} mouse={mousePosition}/>, <Button next={'/cursor-10'} text={'Restart'}/>]}/>
