@@ -5,8 +5,8 @@ import Home from "./Home";
 import NCursors from "./NCursors";
 import {useEffect, useState} from "react";
 import Button from "./Button";
-import {homepage} from "../package.json";
 
+const homepage = require("../package.json").homepage;
 function App() {
     const [mousePosition, setMousePosition] = useState({x: 0, y: 0});
 

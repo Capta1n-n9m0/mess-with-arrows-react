@@ -1,6 +1,7 @@
 import {Link} from "react-router-dom";
 import "./App.css"
-import {homepage} from "../package.json";
+
+const homepage = require("../package.json").homepage;
 
 export default function Navbar() {
     return (

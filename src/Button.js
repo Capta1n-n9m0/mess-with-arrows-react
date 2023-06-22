@@ -1,5 +1,5 @@
 import {useState} from "react";
-import {homepage} from "../package.json";
+const homepage = require("../package.json").homepage;
 
 export default function Button({text, next}) {
     const [reference, setReference] = useState({
