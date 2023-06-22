@@ -1,4 +1,5 @@
 import {useState} from "react";
+import {homepage} from "../package.json";
 
 export default function Button({text, next}) {
     const [reference, setReference] = useState({
@@ -18,6 +19,6 @@ export default function Button({text, next}) {
         zIndex: '20z',
     }
     return (
-        <a href={next} style={style}>{text}</a>
+        <a href={homepage+next} style={style}>{text}</a>
     )
 }
