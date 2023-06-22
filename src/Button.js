@@ -1,5 +1,5 @@
 import {useState} from "react";
-const homepage = require("../package.json").homepage;
+import {Link} from "react-router-dom";
 
 export default function Button({text, next}) {
     const [reference, setReference] = useState({
@@ -19,6 +19,6 @@ export default function Button({text, next}) {
         zIndex: '20z',
     }
     return (
-        <a href={homepage+next} style={style}>{text}</a>
+        <Link to={next} style={style}>{text}</Link>
     )
 }
