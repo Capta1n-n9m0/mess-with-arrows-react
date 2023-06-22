@@ -12,7 +12,6 @@ function App() {
 
     useEffect(() => {
         const handleMouseMove = (event) => {
-            console.log(event.movementX, event.movementY)
             setMousePosition({x: event.clientX, y: event.clientY});
         };
 
