@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/mess-with-arrows-react/static/css/main.38679901.css",
-    "main.js": "/mess-with-arrows-react/static/js/main.2a0d8bfb.js",
+    "main.js": "/mess-with-arrows-react/static/js/main.f7edc282.js",
     "static/js/787.c6fc067d.chunk.js": "/mess-with-arrows-react/static/js/787.c6fc067d.chunk.js",
     "static/media/cursor.svg": "/mess-with-arrows-react/static/media/cursor.9daac4309f1423df9e5f7fdb23698056.svg",
     "index.html": "/mess-with-arrows-react/index.html",
     "main.38679901.css.map": "/mess-with-arrows-react/static/css/main.38679901.css.map",
-    "main.2a0d8bfb.js.map": "/mess-with-arrows-react/static/js/main.2a0d8bfb.js.map",
+    "main.f7edc282.js.map": "/mess-with-arrows-react/static/js/main.f7edc282.js.map",
     "787.c6fc067d.chunk.js.map": "/mess-with-arrows-react/static/js/787.c6fc067d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.38679901.css",
-    "static/js/main.2a0d8bfb.js"
+    "static/js/main.f7edc282.js"
   ]
 }
