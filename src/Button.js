@@ -6,6 +6,11 @@ export default function Button({text, next}) {
         x: Math.random() * (window.innerWidth - 170) + 170,
         y: Math.random() * window.innerHeight,
     });
+    let handleClick = () => {setReference({
+        x: Math.random() * (window.innerWidth - 170) + 170,
+        y: Math.random() * window.innerHeight,
+    });};
+
     // rounded box with text
     const style = {
         backgroundColor: 'yellow',
@@ -19,6 +24,6 @@ export default function Button({text, next}) {
         zIndex: '20',
     }
     return (
-        <Link to={next} style={style}>{text}</Link>
+        <Link to={next} onClick={handleClick} style={style}>{text}</Link>
     )
 }
