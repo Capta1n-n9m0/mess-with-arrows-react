@@ -16,7 +16,7 @@ export default function Button({text, next}) {
         position: 'absolute',
         left: reference.x,
         top: reference.y,
-        zIndex: '20z',
+        zIndex: '20',
     }
     return (
         <Link to={next} style={style}>{text}</Link>
